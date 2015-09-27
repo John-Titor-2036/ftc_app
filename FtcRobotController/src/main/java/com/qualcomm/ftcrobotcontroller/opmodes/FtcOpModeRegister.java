@@ -50,6 +50,7 @@ public class FtcOpModeRegister implements OpModeRegister {
     //Registered Op Modes
 
     manager.register("Arcade Drive",ArcadeDrive.class);
+    manager.register("Tank Drive (6W)",TankDrive6WD.class);
 
     //Unregistered Op Modes
 
