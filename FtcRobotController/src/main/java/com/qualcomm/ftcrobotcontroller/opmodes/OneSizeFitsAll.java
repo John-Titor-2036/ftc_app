@@ -28,6 +28,8 @@ public class OneSizeFitsAll extends OpMode {
 		// AMT. OF MOTORS
 	}
 
+	public configType CONFIG;
+
 	public OneSizeFitsAll() {
 
 	}
@@ -45,8 +47,19 @@ public class OneSizeFitsAll extends OpMode {
 			XmlPullParser parse = Xml.newPullParser();
 			parse.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
 			parse.setInput(in, null);
+			int motorCount = 0;
 			while (parse.next() != XmlPullParser.END_TAG) {
-				telemetry.addData("Value: ", parse.getName());
+				if (parse.getName().equals("Motor")) motorCount++;
+			}
+			telemetry.addData("# of motors: ", motorCount);
+
+			switch (motorCount) {
+				case (2): CONFIG = configType.TWOM;
+					break;
+				case (4): CONFIG = configType.FOURM;
+					break;
+				case (6): CONFIG = configType.SIXM;
+					break;
 			}
 
 				if (in != null) {
@@ -60,6 +73,19 @@ public class OneSizeFitsAll extends OpMode {
 			telemetry.addData("Error: ", e);
 		}
 
+		if (CONFIG == configType.FOURM) {
+			ArcadeDrive ad = new ArcadeDrive();
+			ad.init();
+			ad.loop();
+			ad.stop();
+		}
+
+		else if (CONFIG == configType.SIXM) {
+			TankDrive6WD td = new TankDrive6WD();
+			td.init();
+			td.loop();
+			td.stop();
+		}
 	}
 
 
