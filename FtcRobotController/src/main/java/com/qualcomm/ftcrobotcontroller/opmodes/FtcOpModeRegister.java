@@ -51,7 +51,7 @@ public class FtcOpModeRegister implements OpModeRegister {
 
     manager.register("Arcade Drive",ArcadeDrive.class);
     manager.register("Tank Drive (6W)",TankDrive6WD.class);
-
+    manager.register("OneSizeFitsAll", OneSizeFitsAll.class);
     //Unregistered Op Modes
 
     //manager.register("AdafruitRGBExample", AdafruitRGBExample.class);
