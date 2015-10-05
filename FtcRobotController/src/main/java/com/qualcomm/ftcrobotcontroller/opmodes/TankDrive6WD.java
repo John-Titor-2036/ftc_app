@@ -25,9 +25,9 @@ public class TankDrive6WD extends OpMode {
 	public void init() {
 
         motorLeftBack = hardwareMap.dcMotor.get("motorLeftBack");
-        motorRightBack = hardwareMap.dcMotor.get("motorLeftBack");
-        motorLeftFront = hardwareMap.dcMotor.get("motorLeftBack");
-        motorRightFront = hardwareMap.dcMotor.get("motorLeftBack");
+        motorRightBack = hardwareMap.dcMotor.get("motorRightBack");
+        motorLeftFront = hardwareMap.dcMotor.get("motorLeftFront");
+        motorRightFront = hardwareMap.dcMotor.get("motorRightFront");
 
         motorLeftBack.setDirection(DcMotor.Direction.REVERSE);
         motorLeftFront.setDirection(DcMotor.Direction.REVERSE);
