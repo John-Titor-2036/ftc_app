@@ -5,18 +5,18 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 
 
 /**
- * 6 Weel Tank Drive
+ * 4 Motors Tank Drive
  *
  *
  */
-public class TankDrive6WD extends OpMode {
+public class TankDrive4WD extends OpMode {
 
     DcMotor motorLeftBack;
     DcMotor motorRightBack;
     DcMotor motorLeftFront;
     DcMotor motorRightFront;
 
-	public TankDrive6WD() {
+	public TankDrive4WD() {
 
 	}
 

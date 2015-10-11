@@ -1,3 +1,4 @@
+/*
 package com.qualcomm.ftcrobotcontroller.opmodes;
 
 import android.util.Xml;
@@ -15,9 +16,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 
+*/
 /**
  Marshmallow and @DatSwoosh
- */
+ *//*
+
 
 public class OneSizeFitsAll extends OpMode {
 
@@ -40,49 +43,49 @@ public class OneSizeFitsAll extends OpMode {
 
 		File file = new File("/storage/emulated/0/FIRST/osfa.xml");
 
-		InputStream in = null;
-		try {
-			in = new BufferedInputStream(new FileInputStream(file));
+			InputStream in = null;
+			try {
+				in = new BufferedInputStream(new FileInputStream(file));
 
-			XmlPullParser parse = Xml.newPullParser();
-			parse.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
-			parse.setInput(in, null);
-			int motorCount = 0;
-			while (parse.next() != XmlPullParser.END_TAG) {
-				if (parse.getName().equals("Motor")) motorCount++;
-			}
-			telemetry.addData("# of motors: ", motorCount);
+				XmlPullParser parse = Xml.newPullParser();
+				parse.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
+				parse.setInput(in, null);
+				int motorCount = 0;
+				while (parse.next() != XmlPullParser.END_TAG) {
+					if (parse.getName().equals("Motor")) motorCount++;
+				}
+				telemetry.addData("# of motors: ", motorCount);
 
-			switch (motorCount) {
-				case (2): CONFIG = configType.TWOM;
-					break;
-				case (4): CONFIG = configType.FOURM;
-					break;
-				case (6): CONFIG = configType.SIXM;
-					break;
-			}
+				switch (motorCount) {
+					case (2): CONFIG = configType.TWOM;
+						break;
+					case (4): CONFIG = configType.FOURM;
+						break;
+					case (6): CONFIG = configType.SIXM;
+						break;
+				}
 
 				if (in != null) {
 
 					in.close();
 				}
 
-		}
+			}
 
-		catch (Exception e) {
-			telemetry.addData("Error: ", e);
-		}
+			catch (Exception e) {
+				telemetry.addData("Error: ", e);
+			}
 
-		if (CONFIG == configType.FOURM) {
-			ArcadeDrive ad = new ArcadeDrive();
-			ad.init();
-			ad.loop();
-			ad.stop();
-		}
+			if (CONFIG == configType.FOURM) {
+				ArcadeDrive ad = new ArcadeDrive();
+				ad.init();
+				ad.loop();
+				ad.stop();
+			}
 
-		else if (CONFIG == configType.SIXM) {
-			TankDrive6WD td = new TankDrive6WD();
-			td.init();
+			else if (CONFIG == configType.SIXM) {
+				TankDrive6WD td = new TankDrive6WD();
+				td.init();
 			td.loop();
 			td.stop();
 		}
@@ -101,7 +104,8 @@ public class OneSizeFitsAll extends OpMode {
 
 	}
 
-    	
+
 
 
 }
+*/
