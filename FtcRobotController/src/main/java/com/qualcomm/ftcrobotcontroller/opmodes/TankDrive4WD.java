@@ -29,8 +29,8 @@ public class TankDrive4WD extends OpMode {
         motorLeftFront = hardwareMap.dcMotor.get("motorLeftFront");
         motorRightFront = hardwareMap.dcMotor.get("motorRightFront");
 
-        motorLeftBack.setDirection(DcMotor.Direction.REVERSE);
-        motorLeftFront.setDirection(DcMotor.Direction.REVERSE);
+        motorRightBack.setDirection(DcMotor.Direction.REVERSE);
+        motorRightFront.setDirection(DcMotor.Direction.REVERSE);
 
 	}
 
@@ -38,16 +38,18 @@ public class TankDrive4WD extends OpMode {
 	@Override
 	public void loop() {
 
-        double gamepadY1 = -gamepad1.left_stick_y;
+       double gamepadY1 = -gamepad1.left_stick_y;
         double gamepadY2 = -gamepad1.right_stick_y;
 
-        motorLeftBack.setPower(gamepadY1);
-        motorLeftFront.setPower(gamepadY1);
+        motorLeftBack.setPower(gamepadY2);
+        motorLeftFront.setPower(gamepadY2);
 
-        motorRightBack.setPower(gamepadY2);
-        motorRightFront.setPower(gamepadY2);
+        motorRightBack.setPower(gamepadY1);
+        motorRightFront.setPower(gamepadY1);
 
-	}
+
+
+    }
 
 	@Override
 	public void stop() {

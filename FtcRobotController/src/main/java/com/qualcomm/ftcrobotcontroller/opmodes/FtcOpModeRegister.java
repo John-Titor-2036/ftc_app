@@ -50,7 +50,7 @@ public class FtcOpModeRegister implements OpModeRegister {
     //Registered Op Modes
 
     manager.register("Arcade Drive",ArcadeDrive.class);
-    manager.register("Tank Drive (6W)",TankDrive4WD.class);
+    manager.register("Tank Drive (4M)",TankDrive4WD.class);
   //  manager.register("OneSizeFitsAll", OneSizeFitsAll.class);
     //Unregistered Op Modes
 
@@ -83,7 +83,7 @@ public class FtcOpModeRegister implements OpModeRegister {
     //manager.register("PushBotIrSeek", PushBotIrSeek.class);
     //manager.register("PushBotSquare", PushBotSquare.class);
 
-    //manager.register("NullOp", NullOp.class);
+    manager.register("NullOp", NullOp.class);
 
     //manager.register("K9TeleOp", K9TeleOp.class);
     //manager.register ("PushBotAuto", PushBotAuto.class);
