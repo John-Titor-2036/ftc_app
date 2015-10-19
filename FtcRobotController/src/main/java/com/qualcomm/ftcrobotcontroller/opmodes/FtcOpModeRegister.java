@@ -48,16 +48,26 @@ public class FtcOpModeRegister implements OpModeRegister {
   public void register(OpModeManager manager) {
 
     //Registered Op Modes
-
     manager.register("Arcade Drive",ArcadeDrive.class);
+      manager.register("Arcade Drive 6",ArcadeDrive6.class);
     manager.register("Tank Drive (4M)",TankDrive4WD.class);
-  //  manager.register("OneSizeFitsAll", OneSizeFitsAll.class);
+      manager.register("Tank Drive (6M)",TankDrive6WD.class);
+
+    //manager.register("OneSizeFitsAll", OneSizeFitsAll.class);
     //Unregistered Op Modes
+    //manager.register("NullOp", NullOp.class);
+
+   //manager.register("MatrixK9TeleOp", MatrixK9TeleOp.class);
+   //manager.register("K9TeleOp", K9TeleOp.class);
+   //manager.register ("PushBotAuto", PushBotAuto.class);
+   //manager.register ("PushBotManual", PushBotManual.class);
+
+    /*
+     * Uncomment any of the following lines if you want to register an op mode.
+     */
 
     //manager.register("AdafruitRGBExample", AdafruitRGBExample.class);
-    //manager.register("MRRGBExample", MRRGBExample.class);
     //manager.register("ColorSensorDriver", ColorSensorDriver.class);
-    //manager.register("HTRGBExample", HTRGBExample.class);
 
     //manager.register("IrSeekerOp", IrSeekerOp.class);
     //manager.register("CompassCalibration", CompassCalibration.class);
@@ -79,11 +89,11 @@ public class FtcOpModeRegister implements OpModeRegister {
     //manager.register ("PushBotOdsFollowEvent", PushBotOdsFollowEvent.class);
     //manager.register ("PushBotTouchEvent", PushBotTouchEvent.class);    
     
-    //manager.register("PushBotDriveTouch", PushBotDriveTouch.class);
-    //manager.register("PushBotIrSeek", PushBotIrSeek.class);
-    //manager.register("PushBotSquare", PushBotSquare.class);
+    //manager.register("PushBotDriveTouch", PushBotDriveTouch.java);
+    //manager.register("PushBotIrSeek", PushBotIrSeek.java);
+    //manager.register("PushBotSquare", PushBotSquare.java);
 
-    manager.register("NullOp", NullOp.class);
+    //manager.register("NullOp", NullOp.class);
 
     //manager.register("K9TeleOp", K9TeleOp.class);
     //manager.register ("PushBotAuto", PushBotAuto.class);
