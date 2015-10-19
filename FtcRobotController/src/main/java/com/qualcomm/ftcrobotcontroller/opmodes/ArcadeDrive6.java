@@ -15,6 +15,8 @@ public class ArcadeDrive6 extends OpMode {
     DcMotor motorRightBack;
     DcMotor motorLeftFront;
     DcMotor motorRightFront;
+    DcMotor motorLeftMid;
+    DcMotor motorRightMid;
 
 	public ArcadeDrive6() {
 
@@ -28,9 +30,12 @@ public class ArcadeDrive6 extends OpMode {
         motorRightBack = hardwareMap.dcMotor.get("motorRightBack");
         motorLeftFront = hardwareMap.dcMotor.get("motorLeftFront");
         motorRightFront = hardwareMap.dcMotor.get("motorRightFront");
+        motorLeftMid = hardwareMap.dcMotor.get("motorLeftMid");
+        motorRightMid = hardwareMap.dcMotor.get("motorRightMid");
 
         motorRightBack.setDirection(DcMotor.Direction.REVERSE);
         motorRightFront.setDirection(DcMotor.Direction.REVERSE);
+        motorRightMid.setDirection(DcMotor.Direction.REVERSE);
 
 
 
@@ -59,10 +64,12 @@ public class ArcadeDrive6 extends OpMode {
         //Condensed Version
         motorLeftBack.setPower(Range.clip(-gamepad1.left_stick_y + gamepad1.left_stick_x,-1,1));
         motorLeftFront.setPower(Range.clip(-gamepad1.left_stick_y + gamepad1.left_stick_x,-1,1));
+        motorLeftMid.setPower(Range.clip(-gamepad1.left_stick_y + gamepad1.left_stick_x,-1,1));
 
 
         motorRightFront.setPower(Range.clip(-gamepad1.left_stick_y - gamepad1.left_stick_x,-1,1));
         motorRightBack.setPower(Range.clip(-gamepad1.left_stick_y - gamepad1.left_stick_x,-1,1));
+        motorRightMid.setPower(Range.clip(-gamepad1.left_stick_y - gamepad1.left_stick_x,-1,1));
 
 
 
