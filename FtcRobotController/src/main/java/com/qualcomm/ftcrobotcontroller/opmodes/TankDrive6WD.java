@@ -43,7 +43,7 @@ public class TankDrive6WD extends OpMode {
 	@Override
 	public void loop() {
 
-       double gamepadY1 = -gamepad1.left_stick_y;
+        double gamepadY1 = -gamepad1.left_stick_y;
         double gamepadY2 = -gamepad1.right_stick_y;
 
         motorLeftBack.setPower(gamepadY2);
