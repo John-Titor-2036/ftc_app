@@ -23,8 +23,10 @@ public class AutonomousPlayground extends OpMode {
     DcMotor motorLeftMid;
     DcMotor motorRightMid;
 
+    DcMotor motorIntake;
 
     Driver captain;
+    Driver intake;
 
 
 	public AutonomousPlayground() {
@@ -35,7 +37,7 @@ public class AutonomousPlayground extends OpMode {
 	@Override
 	public void init() {
 
-        motorLeftBack = hardwareMap.dcMotor.get("motorLeftBack");
+       /* motorLeftBack = hardwareMap.dcMotor.get("motorLeftBack");
         motorRightBack = hardwareMap.dcMotor.get("motorRightBack");
         motorLeftFront = hardwareMap.dcMotor.get("motorLeftFront");
         motorRightFront = hardwareMap.dcMotor.get("motorRightFront");
@@ -44,11 +46,13 @@ public class AutonomousPlayground extends OpMode {
 
         motorRightBack.setDirection(DcMotor.Direction.REVERSE);
         motorRightFront.setDirection(DcMotor.Direction.REVERSE);
-        motorRightMid.setDirection(DcMotor.Direction.REVERSE);
+        motorRightMid.setDirection(DcMotor.Direction.REVERSE);*/
 
-        captain = new Driver(motorLeftBack,motorRightBack,motorLeftFront,motorRightFront, motorLeftMid, motorRightMid);
+        motorIntake = hardwareMap.dcMotor.get("motorIntake");
 
+        //captain = new Driver(motorLeftBack,motorRightBack,motorLeftFront,motorRightFront, motorLeftMid, motorRightMid);
 
+        intake = new Driver(motorIntake);
 
 	}
 
@@ -57,7 +61,7 @@ public class AutonomousPlayground extends OpMode {
 	public void loop() {
 
 
-
+        motorIntake.setPower(1);
 
 
     }

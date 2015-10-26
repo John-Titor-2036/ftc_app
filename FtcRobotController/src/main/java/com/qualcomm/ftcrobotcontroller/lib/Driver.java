@@ -11,6 +11,8 @@ public class Driver {
     DcMotor motorLeftMid;
     DcMotor motorRightMid;
 
+    DcMotor motorIntake;
+
 
     public Driver(DcMotor motorLeftBack, DcMotor motorRightBack, DcMotor motorLeftFront,
                   DcMotor motorRightFront, DcMotor motorLeftMid, DcMotor motorRightMid) {
@@ -23,6 +25,11 @@ public class Driver {
 
     }
 
+    public Driver(DcMotor motorIntake)
+    {
+        this.motorIntake = motorIntake;
+    }
+
     public void test() {
         motorLeftBack.setPower(1);
         motorLeftFront.setPower(1);
@@ -31,6 +38,10 @@ public class Driver {
         motorRightBack.setPower(1);
         motorRightFront.setPower(1);
         motorRightMid.setPower(1);
+    }
+
+    public void runIntake() {
+        motorIntake.setPower(1);
     }
 
 }
