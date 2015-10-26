@@ -1,5 +1,9 @@
 package com.qualcomm.ftcrobotcontroller.opmodes;
 
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+
 import com.qualcomm.ftcrobotcontroller.lib.Driver;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -44,6 +48,8 @@ public class AutonomousPlayground extends OpMode {
 
         captain = new Driver(motorLeftBack,motorRightBack,motorLeftFront,motorRightFront, motorLeftMid, motorRightMid);
 
+
+
 	}
 
 
@@ -51,7 +57,8 @@ public class AutonomousPlayground extends OpMode {
 	public void loop() {
 
 
-        captain.test();
+
+
 
     }
 
