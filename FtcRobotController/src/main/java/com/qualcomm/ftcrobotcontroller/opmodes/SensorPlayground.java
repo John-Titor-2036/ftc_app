@@ -1,21 +1,25 @@
+/*
 package com.qualcomm.ftcrobotcontroller.opmodes;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 
 
+*/
 /**
  * Playground for testing Sensor functions
  *
  *
- */
+ *//*
+
 public class SensorPlayground extends OpMode implements SensorEventListener {
 
 
-    Driver captain;
+    //Driver captain;
 
 
     double degree = 0;
@@ -80,3 +84,4 @@ public class SensorPlayground extends OpMode implements SensorEventListener {
 	}
 
 }
+*/

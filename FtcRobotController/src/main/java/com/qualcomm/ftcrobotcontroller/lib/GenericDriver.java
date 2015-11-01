@@ -11,12 +11,11 @@ public class GenericDriver {
     public GenericDriver() {
 
 
-
     }
 
     public DcMotor getMotor(int index) {
 
-        return motors[index-1];
+        return motors[index - 1];
     }
 
     public void run(DcMotor motor) {
