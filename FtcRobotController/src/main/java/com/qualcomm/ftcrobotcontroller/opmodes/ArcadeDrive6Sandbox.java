@@ -1,16 +1,18 @@
 package com.qualcomm.ftcrobotcontroller.opmodes;
 
-import com.qualcomm.ftcrobotcontroller.lib.GenericDriver;
+import com.qualcomm.ftcrobotcontroller.lib.ArcadeDriver6;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
-
+import com.qualcomm.robotcore.util.Range;
 
 /**
- * Playground for testing Autonomous functions
+ * Arcade Drive
  *
  *
  */
-public class AutonomousPlayground extends OpMode {
+public class ArcadeDrive6Sandbox extends OpMode {
+
+    ArcadeDriver6 captain;
 
     DcMotor motorLeftBack;
     DcMotor motorRightBack;
@@ -19,13 +21,8 @@ public class AutonomousPlayground extends OpMode {
     DcMotor motorLeftMid;
     DcMotor motorRightMid;
 
-    DcMotor motorIntake;
 
-    //Driver captain;
-    GenericDriver intake;
-
-
-	public AutonomousPlayground() {
+	public ArcadeDrive6Sandbox() {
 
 	}
 
@@ -33,7 +30,7 @@ public class AutonomousPlayground extends OpMode {
 	@Override
 	public void init() {
 
-       /* motorLeftBack = hardwareMap.dcMotor.get("motorLeftBack");
+        motorLeftBack = hardwareMap.dcMotor.get("motorLeftBack");
         motorRightBack = hardwareMap.dcMotor.get("motorRightBack");
         motorLeftFront = hardwareMap.dcMotor.get("motorLeftFront");
         motorRightFront = hardwareMap.dcMotor.get("motorRightFront");
@@ -42,13 +39,10 @@ public class AutonomousPlayground extends OpMode {
 
         motorRightBack.setDirection(DcMotor.Direction.REVERSE);
         motorRightFront.setDirection(DcMotor.Direction.REVERSE);
-        motorRightMid.setDirection(DcMotor.Direction.REVERSE);*/
+        motorRightMid.setDirection(DcMotor.Direction.REVERSE);
 
-        motorIntake = hardwareMap.dcMotor.get("motorIntake");
+        captain = new ArcadeDriver6(motorLeftBack, motorRightBack, motorLeftFront, motorRightFront, motorLeftMid, motorRightMid, gamepad1);
 
-        //captain = new Driver(motorLeftBack,motorRightBack,motorLeftFront,motorRightFront, motorLeftMid, motorRightMid);
-
-        intake = new GenericDriver();
 
 	}
 
@@ -56,8 +50,7 @@ public class AutonomousPlayground extends OpMode {
 	@Override
 	public void loop() {
 
-
-        intake.run(motorIntake);
+        captain.userControl();
 
 
     }
