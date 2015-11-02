@@ -2,21 +2,25 @@ package com.qualcomm.ftcrobotcontroller.lib;
 
 
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorController;
 
 public class GenericDriver {
 
-
-    DcMotor[] motors;
+    boolean encoderEnabled;
 
     public GenericDriver() {
 
+        encoderEnabled = false;
 
     }
 
-    public DcMotor getMotor(int index) {
+    public void enableEncoder(DcMotor motor) {
 
-        return motors[index - 1];
+        motor.setChannelMode(DcMotorController.RunMode.RUN_USING_ENCODERS);
+        encoderEnabled = true;
+
     }
+
 
     public void run(DcMotor motor) {
 
@@ -30,9 +34,24 @@ public class GenericDriver {
 
     }
 
-    public void stop(DcMotor motor) {
-        motor.setPower(0);
+    public void run(DcMotor Motor, double power, double metres) {
+
+        if (encoderEnabled)
+
     }
 
+
+    public void stop(DcMotor motor) {
+
+        motor.setPower(0);
+
+    }
+
+    /* TODO
+    Run for X metres
+    Run for X metres at X speed
+
+
+     */
 
 }
