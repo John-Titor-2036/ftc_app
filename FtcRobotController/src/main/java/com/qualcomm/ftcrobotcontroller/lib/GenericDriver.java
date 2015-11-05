@@ -36,7 +36,7 @@ public class GenericDriver {
 
     public void run(DcMotor Motor, double power, double metres) {
 
-        if (encoderEnabled)
+
 
     }
 
