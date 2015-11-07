@@ -1,6 +1,7 @@
 package com.qualcomm.ftcrobotcontroller.opmodes;
 
 import com.qualcomm.ftcrobotcontroller.lib.ArcadeDriver6;
+import com.qualcomm.ftcrobotcontroller.lib.GenericDriver;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.Range;
@@ -21,6 +22,8 @@ public class ArcadeDrive6Sandbox extends OpMode {
     DcMotor motorRightFront;
     DcMotor motorLeftMid;
     DcMotor motorRightMid;
+
+    DcMotor motorLauncher;
 
 
 	public ArcadeDrive6Sandbox() {
