@@ -13,6 +13,7 @@ import com.qualcomm.robotcore.util.Range;
 public class ArcadeDrive6Sandbox extends OpMode {
 
     ArcadeDriver6 captain;
+    GenericDriver launch;
 
     DcMotor motorLeftBack;
     DcMotor motorRightBack;
@@ -42,7 +43,13 @@ public class ArcadeDrive6Sandbox extends OpMode {
         motorRightMid.setDirection(DcMotor.Direction.REVERSE);
 
         captain = new ArcadeDriver6(motorLeftBack, motorRightBack, motorLeftFront, motorRightFront, motorLeftMid, motorRightMid, gamepad1);
-
+	
+	
+	
+	motorLauncher = hardwareMap.dcMotor.get("launcher");
+	
+	launch = new GenericDriver();
+	
 
 	}
 
@@ -51,6 +58,8 @@ public class ArcadeDrive6Sandbox extends OpMode {
 	public void loop() {
 
         captain.userControl();
+        if (gamepad1.a) launch.run(motorLauncher);
+        else launch.stop(motorLauncher);
 
 
     }
