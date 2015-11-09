@@ -48,18 +48,17 @@ public class FtcOpModeRegister implements OpModeRegister {
   public void register(OpModeManager manager) {
 
 
-      //manager.register("Arcade Drive",ArcadeDrive.class);
+      manager.register("Arcade Drive - 6",ArcadeDrive6.class);
 
-      manager.register("Arcade Drive",ArcadeDrive6.class);
+      manager.register("Arcade Drive - 4",ArcadeDrive4.class);
 
       //manager.register("Tank Drive (4M)",TankDrive4WD.class);
 
-      manager.register("Tank Drive",TankDrive6WD.class);
-
+      manager.register("Tank Drive - 6",TankDrive6WD.class);
 
       manager.register("Autonomous Playground", AutonomousPlayground.class);
 
-      manager.register("Arcade Drive - Testing", ArcadeDrive6Sandbox.class);
+      manager.register("Arcade Drive - Testing", ArcadeDriveSandbox.class);
 
 
       //manager.register("Sensor Playground", SensorPlayground.class);

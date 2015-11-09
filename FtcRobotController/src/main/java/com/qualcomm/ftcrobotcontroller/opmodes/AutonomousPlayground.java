@@ -1,6 +1,6 @@
 package com.qualcomm.ftcrobotcontroller.opmodes;
 
-import com.qualcomm.ftcrobotcontroller.lib.GenericDriver;
+import com.qualcomm.ftcrobotcontroller.lib.DriveGen;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
@@ -22,7 +22,7 @@ public class AutonomousPlayground extends OpMode {
     DcMotor motorIntake;
 
     //Driver captain;
-    GenericDriver intake;
+    DriveGen intake;
 
 
 	public AutonomousPlayground() {
@@ -48,7 +48,7 @@ public class AutonomousPlayground extends OpMode {
 
         //captain = new Driver(motorLeftBack,motorRightBack,motorLeftFront,motorRightFront, motorLeftMid, motorRightMid);
 
-        intake = new GenericDriver();
+        intake = new DriveGen();
 
 	}
 
